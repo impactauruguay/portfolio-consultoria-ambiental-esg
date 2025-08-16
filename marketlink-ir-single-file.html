@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketLink IR | Consultoría Estratégica y ESG</title>
+    <meta name="description" content="Especialista en consultoría ambiental, ESG y sostenibilidad. Experiencia técnica profunda en informes ambientales y normativas. Disponible para colaboración gubernamental y proyectos científicos. Combinando expertise digital con trabajo de campo en naturaleza.">
+    <meta name="keywords" content="consultoría ambiental, ESG, sostenibilidad, colaboración gubernamental, informes técnicos ambientales, normativas ambientales, proyectos gubernamentales, integración tecnología naturaleza">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4424D6;
+            --secondary-color: #B2D732;
+            --accent-color: #FFEF00;
+            --bg-light: #F0F7D4;
+            --bg-dark: #110934;
+            --text-dark: #110934;
+            --text-light: #F0F7D4;
+            --primary-purple: var(--primary-color);
+            --primary-green: var(--secondary-color);
+            --accent-yellow: var(--accent-color);
+            --bg-secondary: var(--bg-light);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f5f5dc; /* Beige background */
+            color: var(--text-dark);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .nav-link {
+            position: relative;
+            color: var(--text-dark);
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-purple);
+            transition: width 0.3s;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-purple);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link-mobile {
+            color: var(--text-dark);
+            padding: 8px 0;
+            transition: color 0.3s;
+        }
+
+        .nav-link-mobile:hover {
+            color: var(--primary-purple);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-purple);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #311B92; /* Darker purple */
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: white;
+            border: 2px solid white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            transition: background-color 0.3s, color 0.3s, transform 0.2s;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: var(--text-dark);
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .service-card {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+        }
+
+        .service-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 24px;
+        }
+
+        .experience-item {
+            padding: 1.5rem;
+            border-left: 3px solid var(--primary-green);
+            background-color: white;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .vision-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .vision-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+        }
+
+        .vision-card .vision-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary-purple);
+        }
+
+        #contact-form input, #contact-form select, #contact-form textarea {
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        #contact-form input:focus, #contact-form select:focus, #contact-form textarea:focus {
+            border-color: var(--primary-purple);
+            box-shadow: 0 0 0 3px rgba(68, 36, 214, 0.2);
+            outline: none;
+        }
+
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        #hero-section {
+            background: linear-gradient(to right, #110934, #4424d6);
+        }
+    </style>
+</head>
+<body class="text-dark">
+    <!-- Navegación -->
+    <nav class="fixed top-0 w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-2xl font-semibold" style="color: var(--primary-purple);">
+                    <i class="fas fa-link mr-2"></i>MarketLink IR
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#inicio" class="nav-link">Inicio</a>
+                    <a href="#disponibilidad" class="nav-link">Disponibilidad</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#experiencia" class="nav-link">Experiencia</a>
+                    <a href="#vision" class="nav-link">Visión</a>
+                    <a href="#sobre" class="nav-link">Sobre</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </div>
+                <button class="md:hidden" style="color: var(--primary-purple);" id="menu-toggle">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            <!-- Menú móvil -->
+            <div class="md:hidden hidden" id="mobile-menu">
+                <div class="py-4 space-y-3">
+                    <a href="#inicio" class="block nav-link-mobile">Inicio</a>
+                    <a href="#disponibilidad" class="block nav-link-mobile">Disponibilidad</a>
+                    <a href="#servicios" class="block nav-link-mobile">Servicios</a>
+                    <a href="#experiencia" class="block nav-link-mobile">Experiencia</a>
+                    <a href="#vision" class="block nav-link-mobile">Visión</a>
+                    <a href="#sobre" class="block nav-link-mobile">Sobre</a>
+                    <a href="#contacto" class="block nav-link-mobile">Contacto</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section - Bienvenida -->
+    <section id="inicio" class="min-h-screen flex items-center relative overflow-hidden" style="background: linear-gradient(to right, #110934, #4424d6);">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                    Consultoría Ambiental 
+                    <span style="color: var(--secondary-color);">Técnica y Estratégica</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8 leading-relaxed">
+                    Especialista en ESG, sostenibilidad e informes técnicos ambientales. 
+                    <strong>Disponible para colaboración gubernamental</strong> en proyectos científicos que combinen experiencia digital con trabajo de campo en naturaleza.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contacto" class="btn-primary">
+                        <i class="fas fa-handshake mr-2"></i>
+                        Iniciar Colaboración
+                    </a>
+                    <a href="#servicios" class="btn-secondary">
+                        <i class="fas fa-leaf mr-2"></i>
+                        Ver Servicios Técnicos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destacado - Disponibilidad para Colaboración Gubernamental -->
+    <section id="disponibilidad" class="py-20" style="background-color: var(--bg-light);">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center px-4 py-2 rounded-full mb-6" style="background-color: var(--accent-yellow); color: var(--text-dark);">
+                    <i class="fas fa-star mr-2"></i>
+                    <span class="font-semibold">Disponible para Proyectos Gubernamentales</span>
+                </div>
+                <h2 class="section-title">Colaboración Científica Ambiental</h2>
+                <p class="text-lg mb-8" style="color: var(--text-dark);">
+                    Busco activamente <strong>colaborar con entidades gubernamentales</strong> (sin importar partido) 
+                    en iniciativas científicas ambientales. Mi transición profesional me permite dedicarme completamente 
+                    a proyectos que combinen rigor técnico con impacto ambiental real.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8 mt-12">
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" 
+                             style="background-color: var(--primary-green); color: white;">
+                            <i class="fas fa-university text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Colaboración Gubernamental</h3>
+                        <p class="text-sm" style="color: var(--text-dark);">Disponible para proyectos científicos ambientales con cualquier administración</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" 
+                             style="background-color: var(--primary-purple); color: white;">
+                            <i class="fas fa-microscope text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Enfoque Científico</h3>
+                        <p class="text-sm" style="color: var(--text-dark);">Metodología rigurosa en análisis ambientales y reportes técnicos</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center" 
+                             style="background-color: #FC600A; color: white;">
+                            <i class="fas fa-tree text-2xl"></i>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Integración Naturaleza-Tecnología</h3>
+                        <p class="text-sm" style="color: var(--text-dark);">Combinando expertise digital con trabajo de campo directo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Servicios Especializados</h2>
+                <p class="text-lg max-w-3xl mx-auto" style="color: var(--text-dark);">
+                    Servicios técnicos profesionales en consultoría ambiental, ESG y sostenibilidad, 
+                    diseñados para proyectos gubernamentales y organizaciones comprometidas con el impacto ambiental real.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Servicio 1: Consultoría ESG -->
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: var(--primary-green); color: white;">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Consultoría ESG y Sostenibilidad</h3>
+                    <p class="text-gray-600 mb-4">Implementación estratégica de criterios ESG con enfoque en normativas ambientales y contabilidad sostenible.</p>
+                    <ul class="text-sm space-y-1" style="color: var(--text-dark);">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Evaluación de impacto ambiental</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Estrategias de sostenibilidad</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Compliance normativo</li>
+                    </ul>
+                </div>
+                
+                <!-- Servicio 2: Informes Técnicos -->
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: var(--primary-purple); color: white;">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Informes Técnicos Ambientales</h3>
+                    <p class="text-gray-600 mb-4">Elaboración de reportes técnicos profundos con metodología científica rigurosa para toma de decisiones.</p>
+                    <ul class="text-sm space-y-1" style="color: var(--text-dark);">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Análisis de datos ambientales</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Reportes de sostenibilidad</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Documentación científica</li>
+                    </ul>
+                </div>
+                
+                <!-- Servicio 3: Asesoría Normativa -->
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: #007bff; color: white;">
+                        <i class="fas fa-gavel"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Asesoría en Normativas Ambientales</h3>
+                    <p class="text-gray-600 mb-4">Especialización en regulaciones ambientales y frameworks de sostenibilidad para organizaciones públicas.</p>
+                    <ul class="text-sm space-y-1" style="color: var(--text-dark);">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Interpretación normativa</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Procesos de certificación</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Auditorías ambientales</li>
+                    </ul>
+                </div>
+                
+                <!-- Servicio 4: Proyectos Gubernamentales -->
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: #FC600A; color: white;">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Colaboración en Proyectos Gubernamentales</h3>
+                    <p class="text-gray-600 mb-4">Apoyo técnico especializado en iniciativas ambientales gubernamentales con enfoque científico.</p>
+                    <ul class="text-sm space-y-1" style="color: var(--text-dark);">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Políticas ambientales</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Estudios de impacto</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Planificación estratégica</li>
+                    </ul>
+                </div>
+                
+                <!-- Servicio 5: Integración Tecnología-Naturaleza -->
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: #8CAFBB; color: white;">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Integración Tecnología-Naturaleza</h3>
+                    <p class="text-gray-600 mb-4">Soluciones innovadoras que combinan herramientas digitales con investigación de campo directa.</p>
+                    <ul class="text-sm space-y-1" style="color: var(--text-dark);">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Monitoreo digital</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Análisis de datos de campo</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Plataformas de gestión</li>
+                    </ul>
+                </div>
+                
+                <!-- Servicio 6: Contabilidad ESG -->
+                <div class="service-card">
+                    <div class="service-icon" style="background-color: #9DBF9E; color: white;">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Contabilidad ESG</h3>
+                    <p class="text-gray-600 mb-4">Implementación de marcos contables ambientales y medición de impactos con métricas ESG.</p>
+                    <ul class="text-sm space-y-1" style="color: var(--text-dark);">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Métricas de sostenibilidad</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Contabilidad verde</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Reporting financiero ESG</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia" class="py-20" style="background-color: var(--bg-light);">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Trayectoria Técnica y Transición</h2>
+                <p class="text-lg max-w-3xl mx-auto" style="color: var(--text-dark);">
+                    Mi experiencia combina sólidos conocimientos técnicos en contabilidad ESG, diseño y programación 
+                    con una transición consciente hacia el trabajo ambiental de campo.
+                </p>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="space-y-6">
+                        <div class="experience-item">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--primary-green);"></div>
+                                <h3 class="font-semibold text-lg">Experiencia en Contabilidad ESG</h3>
+                            </div>
+                            <p class="text-gray-600">Implementación de normativas ESG y sostenibilidad en marcos contables, con enfoque en medición de impacto ambiental y reporting especializado.</p>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--primary-purple);"></div>
+                                <h3 class="font-semibold text-lg">Diseño y Programación</h3>
+                            </div>
+                            <p class="text-gray-600">Conocimientos técnicos en desarrollo de soluciones digitales, análisis de datos y creación de plataformas para gestión ambiental.</p>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 rounded-full mr-3" style="background-color: #FC600A;"></div>
+                                <h3 class="font-semibold text-lg">Informes de Sostenibilidad</h3>
+                            </div>
+                            <p class="text-gray-600">Participación activa en elaboración de informes técnicos de sostenibilidad con enfoque científico profundo y metodología rigurosa.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="experience-item">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 rounded-full mr-3" style="background-color: #007bff;"></div>
+                                <h3 class="font-semibold text-lg">Montevideo (2016-2024)</h3>
+                            </div>
+                            <p class="text-gray-600">Años de experiencia técnica en entorno urbano, desarrollando expertise en normativas, análisis de datos y consultoría especializada.</p>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 rounded-full mr-3" style="background-color: #8CAFBB;"></div>
+                                <h3 class="font-semibold text-lg">Transición Hacia la Naturaleza</h3>
+                            </div>
+                            <p class="text-gray-600">Búsqueda activa de reconexión con la naturaleza, priorizando entornos tranquilos y proyectos que combinen técnica con trabajo de campo.</p>
+                        </div>
+                        
+                        <div class="experience-item">
+                            <div class="flex items-center mb-3">
+                                <div class="w-3 h-3 rounded-full mr-3" style="background-color: var(--accent-yellow);"></div>
+                                <h3 class="font-semibold text-lg">Disponibilidad Total</h3>
+                            </div>
+                            <p class="text-gray-600">Situación de flexibilidad que permite dedicación completa a proyectos ambientales significativos y colaboraciones gubernamentales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Visión -->
+    <section id="vision" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="section-title">Visión y Compromiso</h2>
+                <p class="text-lg max-w-3xl mx-auto" style="color: var(--text-dark);">
+                    Mi objetivo es contribuir a la ciencia ambiental mediante la combinación de rigor técnico y trabajo directo en naturaleza, 
+                    priorizando la colaboración en proyectos gubernamentales de impacto real.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="vision-card">
+                    <i class="fas fa-flask vision-icon"></i>
+                    <h3 class="text-xl font-semibold mb-4">Contribución Científica</h3>
+                    <p class="text-gray-600">Aplicar metodología científica rigurosa en proyectos ambientales que generen conocimiento valioso para la toma de decisiones gubernamentales.</p>
+                </div>
+                
+                <div class="vision-card">
+                    <i class="fas fa-building-columns vision-icon"></i>
+                    <h3 class="text-xl font-semibold mb-4">Colaboración Apolítica</h3>
+                    <p class="text-gray-600">Trabajo técnico profesional con cualquier administración gubernamental, priorizando el valor científico por encima de consideraciones políticas.</p>
+                </div>
+                
+                <div class="vision-card">
+                    <i class="fas fa-tree vision-icon"></i>
+                    <h3 class="text-xl font-semibold mb-4">Reconexión Natural</h3>
+                    <p class="text-gray-600">Integración de trabajo de campo directo con herramientas digitales, buscando soluciones ambientales desde la experiencia directa en naturaleza.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre -->
+    <section id="sobre" class="py-20" style="background-color: var(--bg-light);">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center">
+                        <i class="fas fa-user-tie" style="font-size: 10rem; color: var(--primary-purple);"></i>
+                    </div>
+                    <div>
+                        <h2 class="section-title text-left">Historia Personal y Misión</h2>
+                        <div class="space-y-6">
+                            <p class="text-lg" style="color: var(--text-dark);">
+                                Mi trayectoria profesional me ha llevado desde la <strong>experiencia técnica sólida en contabilidad ESG</strong> 
+                                y desarrollo digital en Montevideo, hacia una <strong>transición consciente</strong> que busca reconectar 
+                                con la naturaleza y aplicar conocimientos especializados en el trabajo de campo.
+                            </p>
+                            
+                            <p class="text-lg" style="color: var(--text-dark);">
+                                Esta transición no es solo profesional sino personal: después de años desarrollando expertise técnico, 
+                                busco <strong>entornos tranquilos</strong> donde pueda contribuir de manera significativa a proyectos 
+                                ambientales que combinen rigor científico con impacto real.
+                            </p>
+                            
+                            <div class="bg-white p-6 rounded-xl" style="border-left: 4px solid var(--primary-green);">
+                                <h3 class="font-semibold text-lg mb-3">Valores Fundamentales</h3>
+                                <ul class="space-y-2">
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle mr-3" style="color: var(--primary-green);"></i>
+                                        <span>Rigor científico y metodología técnica</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle mr-3" style="color: var(--primary-green);"></i>
+                                        <span>Compromiso con el impacto ambiental real</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle mr-3" style="color: var(--primary-green);"></i>
+                                        <span>Sensibilidad a la cultura latinoamericana</span>
+                                    </li>
+                                    <li class="flex items-center">
+                                        <i class="fas fa-check-circle mr-3" style="color: var(--primary-green);"></i>
+                                        <span>Transparencia e integridad profesional</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <p class="text-lg font-medium" style="color: var(--primary-purple);">
+                                Mi objetivo actual es <strong>colaborar con gobiernos</strong> en iniciativas científicas ambientales, 
+                                aportando experiencia técnica especializada y dedicación completa a proyectos de valor real.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16">
+                    <h2 class="section-title">Iniciar Colaboración</h2>
+                    <p class="text-lg" style="color: var(--text-dark);">
+                        Disponible para proyectos gubernamentales y consultoría técnica especializada. 
+                        Respuesta rápida y evaluación profesional de oportunidades de colaboración.
+                    </p>
+                </div>
+                
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Información de Contacto -->
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-6">Información de Contacto</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4" 
+                                         style="background-color: var(--primary-green); color: white;">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Correo Electrónico</p>
+                                        <p style="color: var(--text-dark);">impactauruguay@gmail.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4" 
+                                         style="background-color: var(--primary-purple); color: white;">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Teléfono</p>
+                                        <p style="color: var(--text-dark);">+598 99 123 456</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+    <!-- Ícono de LinkedIn -->
+    <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4" 
+         style="background-color: var(--primary-purple); color: white;">
+        <i class="fab fa-linkedin"></i> <!-- Cambiado el ícono a LinkedIn -->
+    </div>
+    <!-- Información del enlace -->
+    <div>
+        <p class="font-medium">LinkedIn</p>
+        <a href="https://www.linkedin.com/in/maurolegorburu/"  target="_blank" 
+           style="color: var(--text-dark); text-decoration: none;">
+            Visitar perfil
+        </a>
+    </div>
+</div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4" 
+                                         style="background-color: #FC600A; color: white;">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Ubicación</p>
+                                        <p style="color: var(--text-dark);">Uruguay - Disponible para proyectos</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center">
+                                    <div class="w-12 h-12 rounded-lg flex items-center justify-center mr-4" 
+                                         style="background-color: #8CAFBB; color: white;">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-medium">Disponibilidad</p>
+                                        <p style="color: var(--text-dark);">Inmediata para colaboraciones</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-lg" style="border: 2px solid var(--primary-green);">
+                            <h4 class="font-semibold text-lg mb-3">Especialización en:</h4>
+                            <div class="grid grid-cols-2 gap-2 text-sm">
+                                <div class="flex items-center">
+                                    <i class="fas fa-check mr-2" style="color: var(--primary-green);"></i>
+                                    <span>Proyectos gubernamentales</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check mr-2" style="color: var(--primary-green);"></i>
+                                    <span>Informes técnicos ESG</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check mr-2" style="color: var(--primary-green);"></i>
+                                    <span>Análisis científico</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-check mr-2" style="color: var(--primary-green);"></i>
+                                    <span>Trabajo de campo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Formulario de Contacto -->
+                    <div>
+                        <form class="space-y-6" id="contact-form">
+                            <div>
+                                <label class="block text-sm font-medium mb-2" style="color: var(--text-dark);">Nombre / Organización</label>
+                                <input type="text" name="nombre" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" 
+                                       style="background-color: white;" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2" style="color: var(--text-dark);">Correo Electrónico</label>
+                                <input type="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" 
+                                       style="background-color: white;" required>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2" style="color: var(--text-dark);">Tipo de Proyecto</label>
+                                <select name="tipo-proyecto" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" 
+                                        style="background-color: white;" required>
+                                    <option value="">Seleccionar tipo de proyecto</option>
+                                    <option value="gubernamental">Proyecto Gubernamental</option>
+                                    <option value="esg-consultoria">Consultoría ESG</option>
+                                    <option value="informe-tecnico">Informe Técnico</option>
+                                    <option value="normativas">Asesoría en Normativas</option>
+                                    <option value="colaboracion">Colaboración Científica</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium mb-2" style="color: var(--text-dark);">Mensaje / Descripción del Proyecto</label>
+                                <textarea name="mensaje" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent" 
+                                          style="background-color: white;" placeholder="Describe brevemente tu proyecto o consulta..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full btn-primary text-center justify-center">
+                                <i class="fas fa-paper-plane mr-2"></i>
+                                Enviar Consulta
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12" style="background-color: var(--bg-dark); color: var(--text-light);">
+        <div class="container mx-auto px-6">
+            <div class="text-center">
+                <div class="mb-6">
+                    <div class="text-2xl font-semibold mb-2">
+                        <i class="fas fa-link mr-2" style="color: var(--primary-green);"></i>MarketLink IR
+                    </div>
+                    <p class="text-gray-300">
+                        Consultoría técnica especializada en sostenibilidad y colaboración gubernamental
+                    </p>
+                </div>
+                
+                <div class="border-t border-gray-700 pt-6">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2024 MarketLink IR. Disponible para proyectos ambientales de impacto.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navbar = document.getElementById('navbar');
+
+            menuToggle.addEventListener('click', function () {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('shadow-md');
+                } else {
+                    navbar.classList.remove('shadow-md');
+                }
+            });
+
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+
+                    if (mobileMenu.classList.contains('hidden') === false) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
